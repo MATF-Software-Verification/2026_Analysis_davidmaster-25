@@ -1,0 +1,5 @@
+/home/uno/Desktop/master/VerifikacijaSoftvera/Projekat/unit_tests/build/CMakeFiles/test_color.dir
+/home/uno/Desktop/master/VerifikacijaSoftvera/Projekat/unit_tests/build/CMakeFiles/test_rect.dir
+/home/uno/Desktop/master/VerifikacijaSoftvera/Projekat/unit_tests/build/CMakeFiles/test_point.dir
+/home/uno/Desktop/master/VerifikacijaSoftvera/Projekat/unit_tests/build/CMakeFiles/edit_cache.dir
+/home/uno/Desktop/master/VerifikacijaSoftvera/Projekat/unit_tests/build/CMakeFiles/rebuild_cache.dir

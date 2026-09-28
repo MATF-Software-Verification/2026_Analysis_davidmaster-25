@@ -1,0 +1,3 @@
+/home/uno/Desktop/master/VerifikacijaSoftvera/Projekat/asan_dynamic/build/CMakeFiles/BrushTest_exe.dir
+/home/uno/Desktop/master/VerifikacijaSoftvera/Projekat/asan_dynamic/build/CMakeFiles/edit_cache.dir
+/home/uno/Desktop/master/VerifikacijaSoftvera/Projekat/asan_dynamic/build/CMakeFiles/rebuild_cache.dir

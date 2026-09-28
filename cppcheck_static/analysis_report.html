@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <title>Cppcheck Report</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            color: #222;
+        }
+
+        h1 {
+            margin-bottom: 25px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #fafafa;
+        }
+
+        td:nth-child(3) {
+            text-align: center;
+            width: 80px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Cppcheck staticka analiza projekta LibreSprite</h1>
+<h3> Uradjeno je testiranje app modula <h3>
+
+<table>
+    <thead>
+        <tr>
+            <th>Cppcheck ID</th>
+            <th>Kategorija</th>
+            <th>Broj</th>
+            <th>Opis</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        
+            <tr>
+                <td>danglingLifetime</td>
+                <td>error</td>
+                <td>1</td>
+                <td>Non-local variable &#x27;m_sprite&#x27; will use pointer to local variable &#x27;spr&#x27;.</td>
+            </tr>
+            
+            <tr>
+                <td>invalidContainerLoop</td>
+                <td>error</td>
+                <td>1</td>
+                <td>Calling &#x27;erase&#x27; while iterating the container is invalid.</td>
+            </tr>
+            
+            <tr>
+                <td>nullPointer</td>
+                <td>error</td>
+                <td>1</td>
+                <td>Null pointer dereference: p</td>
+            </tr>
+            
+            <tr>
+                <td>preprocessorErrorDirective</td>
+                <td>error</td>
+                <td>1</td>
+                <td>#error PNG_MAX_PALETTE_LENGTH should be 256</td>
+            </tr>
+            
+            <tr>
+                <td>unknownMacro</td>
+                <td>error</td>
+                <td>2</td>
+                <td>There is an unknown macro here somewhere. Configuration is required. If VERSION is a macro then please configure it.</td>
+            </tr>
+            
+            <tr>
+                <td>checkersReport</td>
+                <td>information</td>
+                <td>1</td>
+                <td>Active checkers: There was critical errors (use --checkers-report=&lt;filename&gt; to see details)</td>
+            </tr>
+            
+            <tr>
+                <td>missingInclude</td>
+                <td>information</td>
+                <td>4512</td>
+                <td>Include file: &quot;app/app.h&quot; not found.</td>
+            </tr>
+            
+            <tr>
+                <td>missingIncludeSystem</td>
+                <td>information</td>
+                <td>319</td>
+                <td>Include file: &lt;iostream&gt; not found. Please note: Standard library headers do not need to be provided to get proper results.</td>
+            </tr>
+            
+            <tr>
+                <td>noValidConfiguration</td>
+                <td>information</td>
+                <td>1</td>
+                <td>This file is not analyzed. No working configuration could be extracted. Use -v for more details.</td>
+            </tr>
+            
+            <tr>
+                <td>normalCheckLevelMaxBranches</td>
+                <td>information</td>
+                <td>56</td>
+                <td>Limiting analysis of branches. Use --check-level=exhaustive to analyze all branches.</td>
+            </tr>
+            
+            <tr>
+                <td>postfixOperator</td>
+                <td>performance</td>
+                <td>2</td>
+                <td>Prefer prefix ++/-- operators for non-primitive types.</td>
+            </tr>
+            
+            <tr>
+                <td>returnByReference</td>
+                <td>performance</td>
+                <td>2</td>
+                <td>Function &#x27;faceValue()&#x27; should return member &#x27;m_face&#x27; by const reference.</td>
+            </tr>
+            
+            <tr>
+                <td>useInitializationList</td>
+                <td>performance</td>
+                <td>12</td>
+                <td>Variable &#x27;m_format&#x27; is assigned in constructor body. Consider performing initialization in initialization list.</td>
+            </tr>
+            
+            <tr>
+                <td>intToPointerCast</td>
+                <td>portability</td>
+                <td>2</td>
+                <td>Casting non-zero decimal integer literal to pointer.</td>
+            </tr>
+            
+            <tr>
+                <td>bitwiseOnBoolean</td>
+                <td>style</td>
+                <td>1</td>
+                <td>Boolean expression &#x27;hasLayer&#x27; is used in bitwise operation. Did you mean &#x27;||&#x27;?</td>
+            </tr>
+            
+            <tr>
+                <td>clarifyCalculation</td>
+                <td>style</td>
+                <td>1</td>
+                <td>Clarify calculation precedence for &#x27;&amp;&#x27; and &#x27;?&#x27;.</td>
+            </tr>
+            
+            <tr>
+                <td>constParameterCallback</td>
+                <td>style</td>
+                <td>1</td>
+                <td>Parameter &#x27;ev&#x27; can be declared as reference to const. However it seems that &#x27;onReloadStock&#x27; is a callback function, if &#x27;ev&#x27; is declared with const you might also need to cast function pointer(s).</td>
+            </tr>
+            
+            <tr>
+                <td>constParameterPointer</td>
+                <td>style</td>
+                <td>7</td>
+                <td>Parameter &#x27;header&#x27; can be declared as pointer to const</td>
+            </tr>
+            
+            <tr>
+                <td>constParameterReference</td>
+                <td>style</td>
+                <td>3</td>
+                <td>Parameter &#x27;a&#x27; can be declared as reference to const</td>
+            </tr>
+            
+            <tr>
+                <td>constVariable</td>
+                <td>style</td>
+                <td>2</td>
+                <td>Variable &#x27;listBoxes&#x27; can be declared as const array</td>
+            </tr>
+            
+            <tr>
+                <td>constVariablePointer</td>
+                <td>style</td>
+                <td>19</td>
+                <td>Variable &#x27;document&#x27; can be declared as pointer to const</td>
+            </tr>
+            
+            <tr>
+                <td>constVariableReference</td>
+                <td>style</td>
+                <td>10</td>
+                <td>Variable &#x27;enabled&#x27; can be declared as reference to const</td>
+            </tr>
+            
+            <tr>
+                <td>cstyleCast</td>
+                <td>style</td>
+                <td>37</td>
+                <td>C-style pointer casting</td>
+            </tr>
+            
+            <tr>
+                <td>duplicateBreak</td>
+                <td>style</td>
+                <td>3</td>
+                <td>Consecutive return, break, continue, goto or throw statements are unnecessary.</td>
+            </tr>
+            
+            <tr>
+                <td>duplicateCondition</td>
+                <td>style</td>
+                <td>1</td>
+                <td>The if condition is the same as the previous if condition</td>
+            </tr>
+            
+            <tr>
+                <td>duplicateConditionalAssign</td>
+                <td>style</td>
+                <td>3</td>
+                <td>The statement &#x27;if (splitLayers) splitLayers=false&#x27; is logically equivalent to &#x27;splitLayers=false&#x27;.</td>
+            </tr>
+            
+            <tr>
+                <td>funcArgNamesDifferent</td>
+                <td>style</td>
+                <td>18</td>
+                <td>Function &#x27;onExecute&#x27; argument 1 names different: declaration &#x27;context&#x27; definition &#x27;ctx&#x27;.</td>
+            </tr>
+            
+            <tr>
+                <td>funcArgNamesDifferentUnnamed</td>
+                <td>style</td>
+                <td>1</td>
+                <td>Function &#x27;loadObject &lt; std :: shared_ptr &lt; Palette &gt; &gt;&#x27; argument 3 names different: declaration &#x27;&lt;unnamed&gt;&#x27; definition &#x27;readMember&#x27;.</td>
+            </tr>
+            
+            <tr>
+                <td>functionConst</td>
+                <td>style</td>
+                <td>5</td>
+                <td>Either there is a missing &#x27;override&#x27;, or the member function &#x27;app::UndoHistoryWindow::Item::state&#x27; can be const.</td>
+            </tr>
+            
+            <tr>
+                <td>functionStatic</td>
+                <td>style</td>
+                <td>10</td>
+                <td>The member function &#x27;app::PixelIO &lt; RgbTraits &gt;::write_pixel&#x27; can be static.</td>
+            </tr>
+            
+            <tr>
+                <td>knownConditionTrueFalse</td>
+                <td>style</td>
+                <td>16</td>
+                <td>Condition &#x27;sprite&#x27; is always true</td>
+            </tr>
+            
+            <tr>
+                <td>multiCondition</td>
+                <td>style</td>
+                <td>1</td>
+                <td>Expression is always true because &#x27;else if&#x27; condition is opposite to previous condition at line 724.</td>
+            </tr>
+            
+            <tr>
+                <td>noConstructor</td>
+                <td>style</td>
+                <td>2</td>
+                <td>The class &#x27;PixelIO &lt; RgbTraits &gt;&#x27; does not declare a constructor although it has private member variables which likely require initialization.</td>
+            </tr>
+            
+            <tr>
+                <td>noExplicitConstructor</td>
+                <td>style</td>
+                <td>43</td>
+                <td>Class &#x27;Modules&#x27; has a constructor with 1 argument that is not explicit.</td>
+            </tr>
+            
+            <tr>
+                <td>redundantCondition</td>
+                <td>style</td>
+                <td>2</td>
+                <td>Redundant condition: !done. &#x27;done || (!done &amp;&amp; frameTag)&#x27; is equivalent to &#x27;done || frameTag&#x27;</td>
+            </tr>
+            
+            <tr>
+                <td>shadowFunction</td>
+                <td>style</td>
+                <td>4</td>
+                <td>Argument &#x27;key&#x27; shadows outer function</td>
+            </tr>
+            
+            <tr>
+                <td>shadowVariable</td>
+                <td>style</td>
+                <td>20</td>
+                <td>Local variable &#x27;sprite&#x27; shadows outer variable</td>
+            </tr>
+            
+            <tr>
+                <td>unreadVariable</td>
+                <td>style</td>
+                <td>15</td>
+                <td>Variable &#x27;name&#x27; is assigned a value that is never used.</td>
+            </tr>
+            
+            <tr>
+                <td>unusedFunction</td>
+                <td>style</td>
+                <td>12</td>
+                <td>The function &#x27;setUseUI&#x27; is never used.</td>
+            </tr>
+            
+            <tr>
+                <td>unusedLabel</td>
+                <td>style</td>
+                <td>1</td>
+                <td>Label &#x27;type&#x27; is not used.</td>
+            </tr>
+            
+            <tr>
+                <td>unusedVariable</td>
+                <td>style</td>
+                <td>2</td>
+                <td>Unused variable: buf</td>
+            </tr>
+            
+            <tr>
+                <td>useStlAlgorithm</td>
+                <td>style</td>
+                <td>23</td>
+                <td>Consider using std::find_if algorithm instead of a raw loop.</td>
+            </tr>
+            
+            <tr>
+                <td>variableScope</td>
+                <td>style</td>
+                <td>115</td>
+                <td>The scope of the variable &#x27;scaleWidth&#x27; can be reduced.</td>
+            </tr>
+            
+            <tr>
+                <td>virtualCallInConstructor</td>
+                <td>style</td>
+                <td>2</td>
+                <td>Virtual function &#x27;getSrcImage&#x27; is called from constructor &#x27;ToolLoopImpl(Editor*editor,Layer*layer,Context*context,tools::Tool*tool,std::shared_ptr&lt;tools::Ink&gt;ink,Document*document,tools::ToolLoop::Button button,const app::Color&amp;fgColor,const app::Color&amp;bgColor)&#x27; at line 352. Dynamic binding is not used.</td>
+            </tr>
+            
+            <tr>
+                <td>arrayIndexOutOfBoundsCond</td>
+                <td>warning</td>
+                <td>1</td>
+                <td>Either the condition &#x27;bg&lt;=3&#x27; is redundant or the array &#x27;bg_table[3]&#x27; is accessed at index 3, which is out of bounds.</td>
+            </tr>
+            
+            <tr>
+                <td>dangerousTypeCast</td>
+                <td>warning</td>
+                <td>13</td>
+                <td>Potentially invalid type conversion in old-style C cast, clarify/fix with C++ cast</td>
+            </tr>
+            
+            <tr>
+                <td>ignoredReturnValue</td>
+                <td>warning</td>
+                <td>7</td>
+                <td>Return value of function newDocument.release() is not used.</td>
+            </tr>
+            
+            <tr>
+                <td>noCopyConstructor</td>
+                <td>warning</td>
+                <td>1</td>
+                <td>Class &#x27;SelectedFrameTag&#x27; does not have a copy constructor which is recommended since it has dynamic memory/resource management.</td>
+            </tr>
+            
+            <tr>
+                <td>noOperatorEq</td>
+                <td>warning</td>
+                <td>1</td>
+                <td>Class &#x27;SelectedFrameTag&#x27; does not have a operator= which is recommended since it has dynamic memory/resource management.</td>
+            </tr>
+            
+            <tr>
+                <td>uninitMemberVar</td>
+                <td>warning</td>
+                <td>17</td>
+                <td>Member variable &#x27;FramePropertiesCommand::m_target&#x27; is not initialized in the constructor.</td>
+            </tr>
+            
+            <tr>
+                <td>uninitMemberVarNoCtor</td>
+                <td>warning</td>
+                <td>10</td>
+                <td>Member variable &#x27;error_mgr::setjmp_buffer&#x27; has no initializer.</td>
+            </tr>
+            
+    </tbody>
+</table>
+
+</body>
+</html>
